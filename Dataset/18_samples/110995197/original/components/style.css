@@ -1,0 +1,165 @@
+/* 全站基本樣式 */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+}
+
+/* 導覽列 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: white;
+}
+
+.nav-left img {
+    height: 40px;
+}
+
+.nav-right a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #1c1e21;
+    font-size: 14px;
+}
+
+/* 主內容容器：有灰底圓角 */
+.main-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 60px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* 登入區塊 */
+.hero {
+    max-width: 400px;
+    text-align: left;
+}
+
+.hero h1 {
+    color: #1877f2;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e3e3e3;
+    font-size: 15px;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0064e0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.remember {
+    font-size: 14px;
+    color: #555;
+}
+
+/* 下載按鈕區 */
+.download-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.download-buttons img {
+    height: 40px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 4px;
+}
+
+.download-buttons img[alt="從 Microsoft 取得"] {
+    max-width: 140px;
+}
+
+/* 右側模擬圖 */
+.mockups img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* 頁腳 */
+footer {
+    text-align: center;
+    font-size: 13px;
+    padding: 32px 16px;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.footer-links {
+    margin-top: 12px;
+}
+
+.footer-links a {
+    margin: 0 6px;
+    text-decoration: none;
+    color: #65676b;
+}
+
+.language-select {
+    margin: 0 6px;
+}
+
+.from-meta {
+    margin-left: 12px;
+    color: #ffffff;
+}
+
+.from-meta img {
+    height: 40px; /* 或你想要的尺寸，例如 20px */
+    vertical-align: middle;
+}
+
+.meta-inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.meta-inline img {
+    height: 1em;
+    margin-right: 4px;
+}

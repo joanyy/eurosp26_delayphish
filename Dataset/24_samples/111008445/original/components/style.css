@@ -1,0 +1,180 @@
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    height: 379px;
+    width: 348px;
+
+}
+
+.segundacoluna {
+    margin-left: 25px;
+}
+
+.facebook{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.facebook a{
+    text-decoration: none;
+    color: #385185;
+    font-size: 0.82em;
+    font-weight: bold;
+    padding: 23px 0px 0px 5px;
+}
+
+.esqueceu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.esqueceu a{
+    text-decoration: none;
+    font-size: 0.72em;
+    padding: 25px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.criar{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #dbdbdb; 
+}
+
+.apps{
+    display: flex;
+    flex-direction: row;
+}
+
+#iglogo{
+    width: 175px;
+    height: 57px;
+    margin-bottom: 40px;
+    margin-top: 32px;
+}
+
+#mockup{
+    width: 380px;
+    height: 580px;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.facebook img{
+    width: 16px;
+    height: 16px;
+    padding: 21px 0px 5px 0px;
+}
+
+.apps img{
+    width: 130px;
+    height: 40px;
+    
+}
+
+#entrar{
+    background-color: #4cb5f9;
+    color: #ffff;
+    height: 30px;
+    width: 77%;
+    font-weight: bold;
+    font-size: 14px;
+    border: none; 
+    border-radius: 5px; 
+}
+
+#usuario {
+    margin-bottom: 10px;
+    width: 75%;
+    height: 28px;
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: #fafafa; 
+    padding: 5px 0px 5px 5px;
+}
+
+#usuario::placeholder{
+    font-size: 0.90em; 
+}
+
+#senha {
+    margin-bottom: 10px;
+    width: 75%;
+    height: 28px;
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px; 
+    background-color: #fafafa;
+    padding: 4px 0px 4px 5px;
+}
+
+#senha::placeholder{
+    font-size: 0.90em; 
+}
+
+.criar{
+    display: flex;
+    flex-direction: row;
+    padding: 15px; 
+}
+
+.aplicativo p{
+    text-align: center;
+}
+
+.apps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#cadastro {
+    text-decoration: none;
+    color: #4cb5f9;
+    font-weight: bold;
+}
+
+.criar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.88em;
+}
+
+.criar p{
+    margin: 0px 4px 0px 0px;
+}
+
+.texto{
+    font-size: 0.88em;
+}
+

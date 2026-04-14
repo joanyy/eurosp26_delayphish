@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Cairo', sans-serif; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative; }
+  @media (max-width: 467px) {
+    .header {
+      height: 50px; } }
+  .header img {
+    width: 120px; }
+    @media (max-width: 467px) {
+      .header img {
+        width: 90px; } }
+  .header .box {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center; }
+    @media (max-width: 467px) {
+      .header .box {
+        width: 50px;
+        height: 50px; } }
+    .header .box img {
+      width: 40px; }
+      @media (max-width: 467px) {
+        .header .box img {
+          width: 30px; } }
+  .header .right {
+    right: 0;
+    background: #E2001A; }
+  .header .left {
+    left: 0;
+    background: #262626; }
+
+.ads {
+  max-width: 500px;
+  margin: 0 auto; }
+  .ads img {
+    width: 100%;
+    height: 100%; }
+
+.home {
+  padding-top: 20px; }
+  .home .login {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px; }
+    .home .login h4 {
+      font-weight: 700; }
+    .home .login input {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 1px;
+      font-weight: 600; }
+      .home .login input:focus {
+        box-shadow: none;
+        border-bottom: 1px solid #ccc; }
+      .home .login input::placeholder {
+        color: #aaa; }
+    .home .login .mine {
+      display: flex;
+      justify-content: space-between; }
+      .home .login .mine .lona {
+        width: 47%;
+        position: relative; }
+        .home .login .mine .lona img {
+          position: absolute;
+          right: 5px;
+          top: 8px;
+          width: 35px;
+          border-radius: 3px; }
+    .home .login .dlali {
+      position: relative; }
+      .home .login .dlali i {
+        position: absolute;
+        right: 13px;
+        top: 4px;
+        font-size: 20px;
+        color: #ccc; }
+    .home .login .lhih {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: end; }
+      .home .login .lhih p {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 700; }
+      .home .login .lhih img {
+        width: 7px;
+        margin-left: 10px; }
+    .home .login .title {
+      font-size: 16px;
+      color: black;
+      line-height: 20px; }
+    .home .login .bottona {
+      margin-top: 50px;
+      text-align: center; }
+      .home .login .bottona .btn {
+        width: 70%;
+        background: #007A91;
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        margin: 0 auto; }
+    .home .login .version {
+      color: black;
+      font-size: 14px;
+      text-align: center;
+      padding: 30px 20px 20px 20px; }
+
+.fotter {
+  background: #333333;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .fotter .la_lista {
+    max-width: 500px;
+    margin: 0 auto; }
+    .fotter .la_lista ul {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .fotter .la_lista ul li {
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 10px;
+        margin-bottom: 20px;
+        padding: 0px 10px;
+        border-left: 1px solid white;
+        font-size: 13px; }
+    .fotter .la_lista hr {
+      color: white; }
+    .fotter .la_lista .alabama p {
+      margin-bottom: 0;
+      color: white;
+      font-weight: 600;
+      font-size: 14px; }
+      .fotter .la_lista .alabama p img {
+        width: 80px;
+        margin-top: 15px; }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: #E1071A; }
+  .loading .spinner-border {
+    color: white; }
+
+/*# sourceMappingURL=noods.css.map */

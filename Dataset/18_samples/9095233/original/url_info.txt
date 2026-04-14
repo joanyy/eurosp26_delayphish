@@ -1,0 +1,1 @@
+{"url": "https://gravatar.com/futuristic8f9a56a595", "phish_id": 9095233, "brand": "Optus", "submission_time": "2025-05-11T04:48:46+00:00", "current_url": "https://gravatar.com/futuristic8f9a56a595"},

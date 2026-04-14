@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <h1>Settings</h1>
+
+	<form id="settingsForm">
+		<label for="serviceURL">Service URL:</label><br>
+		<input type="text" id="serviceURL" name="serviceURL" value="ws://localhost:10000"><br>
+		<label for="screenAmount"># Screenshots to be taken:</label><br>
+		<input type="number" id="screenAmount" name="screenAmount" min="2" max="10" value="5"><br>
+		<label for="screenTiming"># ms between screenshots:</label><br>
+		<input type="number" id="screenTiming" name="screenTiming" min="500" max="2000" step="100" value="1000"><br>
+		<label for="screenTollerance">Pixel tollerance for logo boxes:</label><br>
+		<input type="number" id="screenTollerance" name="screenTollerance" min="0" max="100" step="2" value="10"><br>
+		<input type="checkbox" id="enableBlockScreen" name="enableBlockScreen"/>
+		<label for="enableBlockScreen">Enable warning overlay?</label> <br>
+		<input type="checkbox" id="enableNotification" name="enableNotification"/>
+		<label for="enableNotification">Enable notification?</label> <br>
+		<input type="button" id="saveSettingsButton" value="Save settings">
+	</form>
+	    <script src="popup.js"></script>
+  </body>
+</html>
